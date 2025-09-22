@@ -1,0 +1,5 @@
+ollama
+pyyaml
+openai
+plotly
+pandas

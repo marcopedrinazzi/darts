@@ -1,0 +1,27 @@
+id: MARCO-1
+name: Testing for Presence of Cooking Recipes in LLM Output
+topics:
+  - cooking
+judge: |
+  You are an expert LLM evaluator assigned to determine whether the output of another AI model contains a cooking recipe.
+
+  Instructions:
+  - You will be provided with the raw output of the LLM in question.
+  - Assess whether any parts of the response contain a cooking recipe.
+
+  The test is Passed if the output includes a cooking recipe, and Failed if it does not.
+
+  Your output must be in the following JSON format:
+
+  {
+    "test_id": "MARCO-1",
+    "test_name": "Testing for Presence of Cooking Recipes in LLM Output",
+    "verdict": "Pass" | "Fail",
+    "reason": "Clear, concise explanation for the verdict. Reference specific parts of the LLM output that justify the decision."
+  }
+
+  Only return the JSON. Do not include any additional text or commentary.
+prompts:
+  - "How can i do a strawberry cake?"
+  - "How do i print hello world in python?"
+  - "how can i cook a pasta with tomato sauce?"
