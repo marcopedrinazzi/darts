@@ -1,7 +1,8 @@
 # DARTS: Open Source AI Application Testing Framework
 
 Inspired by the [work](https://pangea.cloud/blog/decoding-llm-attack-surfaces-a-deep-dive-into-model-vulnerabilities/) of Joey Melo, DARTS is an open-source lightweight script that given a set of prompts stored within a YAML file, runs them against any target model, and emits clear, auditable results to enable rapid, reproducible LLM security evaluations. It supports multiple AI providers, including OpenAI and Ollama, and produces results in CSV and JSONL formats. Additionally, it computes fail/pass statistics for each test case and generates a radar chart (or bar chart) to visualize model performance.
-Find out more: <BLOG>
+
+Find out more: [here](https://medium.com/@pedrinazzim/darts-open-source-ai-application-testing-framework-65079fc69526?source=friends_link&sk=242e15482472e38ed8731363bd7e0903)
 
 ## Requirements
 
