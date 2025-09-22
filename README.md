@@ -1,6 +1,6 @@
 # DARTS: Open Source AI Application Testing Framework
 
-DARTS is a framework designed to test AI models by running YAML-based test cases and generating statistics and visualizations. It supports multiple AI providers, including OpenAI and Ollama, and produces results in CSV and JSONL formats. Additionally, it computes fail/pass statistics for each test case and generates a radar chart (or bar chart) to visualize model performance.
+Inspired by the [work](https://pangea.cloud/blog/decoding-llm-attack-surfaces-a-deep-dive-into-model-vulnerabilities/) of Joey Melo, DARTS is an open-source lightweight script that given a set of prompts stored within a YAML file, runs them against any target model, and emits clear, auditable results to enable rapid, reproducible LLM security evaluations. It supports multiple AI providers, including OpenAI and Ollama, and produces results in CSV and JSONL formats. Additionally, it computes fail/pass statistics for each test case and generates a radar chart (or bar chart) to visualize model performance.
 Find out more: <BLOG>
 
 ## Requirements
@@ -40,6 +40,7 @@ Use the runner.py script to execute YAML-based test cases:
   ```
 
 Arguments:
+ ```bash
 --folder: Path to the folder containing YAML test cases (default: payloads).
 --provider: AI provider (ollama or openai).
 --model: Target model (e.g., gpt-4o, llama3.1).
@@ -47,6 +48,7 @@ Arguments:
 --judge-model: (Optional) Judge model (defaults to --model).
 --out: Path to the output JSONL file (default: results.jsonl).
 --csv: Path to the output CSV file (default: results.csv).
+```
 
 2. Generating Statistics and Charts
 Use the table_and_chart.py script to compute statistics and generate radar charts:
@@ -56,11 +58,12 @@ Use the table_and_chart.py script to compute statistics and generate radar chart
         --stats-file <output-stats-csv-path> \
         --chart-file <output-chart-html-path>
   ```
-
 Arguments:
+```bash
 --results-file: Path to the input results CSV file.
 --stats-file: Path to save the computed statistics CSV file.
 --chart-file: Path to save the radar chart HTML file.
+```
 
 Payloads
 The test cases for the framework are defined in YAML files. Each YAML file specifies a unique test case, including the prompts to be tested, the judging criteria, and metadata.
@@ -97,7 +100,7 @@ Explanation:
 - prompts: List of prompts to be tested against the AI model.
 
 ### OWASP-AITG-APP
-Do you want to test your model with the OWASP-AITG-APP prompts? Check out Joey Melo's work https://github.com/joey-melo/payloads/tree/main/OWASP%20AITG-APP 
+Do you want to test your model with the OWASP-AITG-APP prompts? Check out Joey Melo's work [here](https://github.com/joey-melo/payloads/tree/main/OWASP%20AITG-APP )
 
 ## Output
 ### Test Results
